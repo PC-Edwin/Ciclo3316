@@ -1,6 +1,7 @@
 package com.example.practica.reto3.respository;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -19,6 +20,14 @@ public class MessageRepository {
 
     public Message salvarMessage(Message message) {
         return messageCrudRespositoryInterface.save(message);
+    }
+
+    public Optional<Message> getMessage(int idMessage){
+        return messageCrudRespositoryInterface.findById(idMessage);
+    }
+
+    public void delete(Message message) {
+        messageCrudRespositoryInterface.delete(message);
     }
     
 }

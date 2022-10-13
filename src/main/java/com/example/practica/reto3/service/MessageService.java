@@ -1,6 +1,7 @@
 package com.example.practica.reto3.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -32,5 +33,32 @@ public class MessageService {
              }*/
          }
         return message;
+    }
+
+    public Message actualizarMessage(Message message) {
+        if(message.getIdMessage()!=null){
+            Optional<Message> e= messageRepository.getMessage(message.getIdMessage());
+            if(!e.isEmpty()){
+                if(message.getMessageText()!=null){
+                    e.get().setMessageText(message.getMessageText());
+                }
+                messageRepository.salvarMessage(e.get());
+                return e.get();
+            }else{
+                return message;
+            }
+        }else{
+            return message;
+        }
+    }
+
+    public boolean borrarMessage(int idMessage) {
+        boolean flag=false;
+        Optional<Message> c= messageRepository.getMessage(idMessage);
+        if(c.isPresent()){
+            messageRepository.delete(c.get());
+            flag=true;
+        }
+        return flag;
     }
 }

@@ -1,6 +1,7 @@
 package com.example.practica.reto3.respository;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -20,5 +21,13 @@ public class PartyroomRepository {
 
     public Partyroom salvarPartyroom(Partyroom partyroom) {
         return partyroomCrudRepositoryInterface.save(partyroom);
+    }
+
+    public Optional<Partyroom> getPartyroom(int id){
+        return partyroomCrudRepositoryInterface.findById(id);
+    }
+
+    public void delete(Partyroom partyroom) {
+        partyroomCrudRepositoryInterface.delete(partyroom);
     }
 }
