@@ -1,5 +1,6 @@
 package com.example.practica.reto3.respository;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -28,5 +29,18 @@ public class ReservationRepository {
 
     public void delete(Reservation reservation) {
         reservationCrudRepositoryInterface.delete(reservation);
+    }
+
+    public List<Reservation> ReservacionStatus(String status){
+        return reservationCrudRepositoryInterface.findAllByStatus(status);
+    }
+
+    public List<Reservation> ReservacionTiempo(Date fechaInicial, Date fechaFinal){
+        return reservationCrudRepositoryInterface.findAllByStartDateAfterAndStartDateBefore(fechaInicial, fechaFinal);
+    }
+       
+    public   List<Object[]> reporteClientes() {
+        return reservationCrudRepositoryInterface.reporteClientes();
+
     }
 }

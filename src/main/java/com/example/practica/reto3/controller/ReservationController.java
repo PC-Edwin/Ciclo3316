@@ -17,6 +17,8 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.practica.reto3.model.Reservation;
+import com.example.practica.reto3.reportes.ContadorClientes;
+import com.example.practica.reto3.reportes.StatusReservas;
 import com.example.practica.reto3.service.ReservationService;
 
 
@@ -49,6 +51,21 @@ public class ReservationController {
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public boolean borrarReservation(@PathVariable("id") int idReservation){
         return reservationService.borrarReservation(idReservation);
+    }
+
+    @GetMapping("/report-status")
+    public StatusReservas getStatusReservas() {
+        return reservationService.ReservacionStatus();
+    }
+
+    @GetMapping("/report-dates/{dateOne}/{dateTwo}")
+    public List<Reservation> getReservasTiempo(@PathVariable("dateOne") String fechaInicial,@PathVariable("dateTwo") String fechaFinal) {
+        return reservationService.ReservacionTiempo(fechaInicial, fechaFinal);
+    }
+
+    @GetMapping("/report-clients")
+    public List<ContadorClientes> getClientes() {
+        return reservationService.reporteClientes();
     }
     
 }
