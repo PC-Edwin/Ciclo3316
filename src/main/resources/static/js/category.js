@@ -49,15 +49,18 @@ function pintarRespuestaCategory(items){
 
     //declarar variables js
     let myTable="<table>";
-    myTable += "<tr><th>Id</th><th>Name</th><th>Description</th></tr>";
+    let Section="<section class='tablad1'>";
+    myTable += "<thead><tr><th>Id</th><th>Name</th><th>Description</th><th>                 </th></tr></thead>";
+    Section+=" ";
     for(i=0;i<items.length;i++){
         myTable+="<tr>";
         myTable+="<td>"+items[i].id+"</td>";
         myTable+="<td>"+items[i].name+"</td>";
         myTable+="<td>"+items[i].description+"</td>";
-        myTable+="<td><button onclick='borrarElementoCategory("+items[i].id+")'>Borrar</button>";
+        myTable+="<td><button style='button1' onclick='borrarElementoCategory("+items[i].id+")'>Borrar</button>";
         myTable+="</tr>";                       
     }
+    Section+=" ";
     /*function p (partyrooms) {
         if(partyrooms){
             alert(partyrooms)     

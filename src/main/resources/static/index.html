@@ -3,122 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/estilo.css">
     <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>    
     <title>Reto 3</title>
 </head>
 <body>
-    <h1>Reto Ciclo 3 3.16</h1>
-
+<section class="titulo1">
+    <h1> Ciclo 3 reto 5</h1>
+</section>
      <!--                category                    -->
-
+<section class="form-category">
      <div>
         <h2>Category</h2>
-        <input type="text" id="nameCategory" placeholder="name"> 
-        <input type="text" id="descriptionCategory" placeholder="description">
+        <input class="camposE" type="text" id="nameCategory" placeholder="name">
+        <input class="camposE" type="text" id="descriptionCategory" placeholder="description">
     </div>
      
     <div>
+        <br><br><br><br><br><br><br><br><br>
         <p>Digitar id solo para (actualizar)</p>        
-        <input type="text" id="idCategory" placeholder="id"> 
-    </div><br> 
+        <input class="camposE" type="text" id="idCategory" placeholder="id">
+    </div>
     <p>(DB)</p>
-    <button onclick="guardarInformacionCategory()"> Insertar</button>&nbsp;
-    <button onclick="actualizarInformacionCategory()"> Actualizar</button>  
-    <button onclick="traerInformacionCategory()"> Consultar</button>&nbsp;
-   
-   
-    
-    
+    <button class="bot"class="button1" onclick="guardarInformacionCategory()"> Insertar</button>&nbsp;
+    <button class="bot"onclick="actualizarInformacionCategory()"> Actualizar</button>
+    <button class="bot"onclick="traerInformacionCategory()"> Consultar</button>&nbsp;
 
+</section>
+
+
+    <section class="form-partyroom">
     <!--                Partyroom                    -->
     <div>
         <h2>Partyroom</h2>
         
-        <input type="text" id="namePartyroom" placeholder="name"> 
-        <input type="text" id="ownerPartyroom" placeholder="owner">
-        <input type="number" id="capacityPartyroom" placeholder="capacity">
-        <input type="text" id="descriptionPartyroom" placeholder="description"> 
-        <input type="number" id="id" placeholder="category_id">  
+        <input class="camposE" type="text" id="namePartyroom" placeholder="name">
+        <input class="camposE" type="text" id="ownerPartyroom" placeholder="owner">
+        <input class="camposE" type="number" id="capacityPartyroom" placeholder="capacity">
+        <input class="camposE" type="text" id="descriptionPartyroom" placeholder="description">
+        <input class="camposE" type="number" id="id" placeholder="category_id">
     </div>
     <div>
         <p>Digitar id solo para (actualizar)</p>        
-        <input type="number" id="idParyroom" placeholder="id">  
-    </div><br>
-    <p>(DB)</p>   
-    <button onclick="guardarInformacionPartyroom()"> Insertar</button>&nbsp;
-    <button onclick="editarInformacionPartyroom()">Actualizar</button>
-    <button onclick="traerInformacionPartyroom()"> Consultar</button>&nbsp;       
-    <!--button onclick="consultarIdPartyroom()">consultar por id </button>&nbsp;--> 
+        <input class="camposE" type="number" id="idParyroom" placeholder="id">
+    </div>
+    <p>(DB)</p>
+    <button class="bot" onclick="guardarInformacionPartyroom()"> Insertar</button>&nbsp;
+    <button class="bot" onclick="editarInformacionPartyroom()">Actualizar</button>
+    <button class="bot" onclick="traerInformacionPartyroom()"> Consultar</button>&nbsp;
+    <!--button onclick="consultarIdPartyroom()">consultar por id </button>&nbsp;-->
+    </section>
+
     
     <!--                client                    -->
-
+    <section class="form-client">
     <div>
         <h2>Client</h2> 
-        <input type="text" id="nameC" placeholder="name">
-        <input type="text" id="emailC" placeholder="email">
-        <input type="text" id="passwordC" placeholder="password">
-        <input type="number" id="ageC" placeholder="age">
+        <input class="camposE" type="text" id="nameC" placeholder="name">
+        <input class="camposE" type="text" id="emailC" placeholder="email">
+        <input class="camposE" type="text" id="passwordC" placeholder="password">
+        <input class="camposE" type="number" id="ageC" placeholder="age">
     </div>
 
-    <div>
+    <div><br><br><br>
         <p>Digitar id solo para (actualizar)</p> 
-        <input type="number" id="idClient" placeholder="id">
-    </div><br>
+        <input class="camposE" type="number" id="idClient" placeholder="id">
+    </div>
     <p>(DB)</p>
-    <button onclick="guardarInformacionClient()"> Insertar</button>&nbsp;
-    <button onclick="editarInformacionClient()">Actualizar</button>&nbsp;
-    <button onclick="traerInformacionClient()"> Consultar</button>&nbsp;       
+    <button class="bot"onclick="guardarInformacionClient()"> Insertar</button>&nbsp;
+    <button class="bot"onclick="editarInformacionClient()">Actualizar</button>&nbsp;
+    <button class="bot"onclick="traerInformacionClient()"> Consultar</button>&nbsp;
     <!--button onclick="consultarIdClient()">consultar por id </button>&nbsp;-->
-
+    </section>
     <!--                message                    -->
-
+    <section class="form-message">
     <div>
         <h2>Message</h2>
-        <input type="text" id="messagetext" placeholder="messagetext">
-        <input type="number" id="idPart" placeholder="idPartyroom">
-        <input type="number" id="idClie" placeholder="idClient"> 
+        <input class="camposE" type="text" id="messagetext" placeholder="messagetext">
+        <input class="camposE" type="number" id="idPart" placeholder="idPartyroom">
+        <input class="camposE" type="number" id="idClie" placeholder="idClient">
     </div>
-    <div>
+    <div><br><br><br><br><br><br>
         <p>Digitar id solo para (actualizar)</p> 
-        <input type="number" id="idM" placeholder="id"> 
-    </div><br>
+        <input class="camposE" type="number" id="idM" placeholder="id">
+    </div>
     <p>(DB)</p>
-    <button onclick="guardarInformacionMessage()"> Insertar</button>&nbsp;
-    <button onclick="editarInformacionMessage()">Actualizar</button>&nbsp;
-    <button onclick="traerInformacionMessage()"> Consultar</button>&nbsp;  
+    <button class="bot"onclick="guardarInformacionMessage()"> Insertar</button>&nbsp;
+    <button class="bot"onclick="editarInformacionMessage()">Actualizar</button>&nbsp;
+    <button class="bot"onclick="traerInformacionMessage()"> Consultar</button>&nbsp;
     <!--button onclick="consultarIdMessage()">consultar por id </button>&nbsp;-->
-
+    </section>
     <!--                reservation                   -->
+    <section class="form-reservation">
+
 
     <div>
         <h2>Reservation</h2> 
-        <input type="text" id="startDate" placeholder="startDate">
-        <input type="text" id="devolutiontDate" placeholder="devolutionDate">
-        <input type="number" id="idRoom" placeholder="idPartyroom">
-        <input type="number" id="idClien" placeholder="idClient">
-        <input type="number" id="status" placeholder="status">  
+        <input class="camposE" type="text" id="startDate" placeholder="startDate">
+        <input class="camposE" type="text" id="devolutiontDate" placeholder="devolutionDate">
+        <input class="camposE" type="number" id="idRoom" placeholder="idPartyroom">
+        <input class="camposE" type="number" id="idClien" placeholder="idClient">
+        <input class="camposE" type="number" id="status" placeholder="status">
     </div>
     <div>
         <p>Digitar id solo para (actualizar)</p> 
-        <input type="number" id="idReserva" placeholder="id">
-    </div><br>
-    <p>(DB)</p>
-    <button onclick="guardarInformacionReservation()"> Insertar</button>&nbsp;
-    <button onclick="editarInformacionReservation()">Actualizar</button>&nbsp;
-    <button onclick="traerInformacionReservation()"> Consultar</button>&nbsp;
-    <button onclick="consultarTopClientes()">Status</button>        
-    <!--button onclick="consultarIdReservation()">consultar por id </button>&nbsp;-->
+        <input class="camposE" type="number" id="idReserva" placeholder="id">
+    </div>
 
+    <p>(DB)</p>
+    <button class="bot"onclick="guardarInformacionReservation()"> Insertar</button>&nbsp;
+    <button class="bot"onclick="editarInformacionReservation()">Actualizar</button>&nbsp;
+    <button class="bot"onclick="traerInformacionReservation()"> Consultar</button>&nbsp;
+    <button class="bot"onclick="consultarTopClientes()">Status</button>
+    <!--button onclick="consultarIdReservation()">consultar por id </button>&nbsp;-->
+    </section>
     <br><br><br><br><div  id="resultado">
 
     </div>
  
 
 </body>
-<script type="text/javascript" src="js/category.js"></script>
-<script type="text/javascript" src="js/partyroom.js"></script>
-<script type="text/javascript" src="js/message.js"></script>
-<script type="text/javascript" src="js/client.js"></script>
-<script type="text/javascript" src="js/reservation.js"></script>
+<script class="camposE" type="text/javascript" src="js/category.js"></script>
+<script class="camposE" type="text/javascript" src="js/partyroom.js"></script>
+<script class="camposE" type="text/javascript" src="js/message.js"></script>
+<script class="camposE" type="text/javascript" src="js/client.js"></script>
+<script class="camposE" type="text/javascript" src="js/reservation.js"></script>
 </html>

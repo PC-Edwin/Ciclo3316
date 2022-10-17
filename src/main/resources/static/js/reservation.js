@@ -21,7 +21,7 @@ function pintarRespuestaReservation(items){
 
     //declarar variables js
     let myTableM="<table>";
-    myTableM += "<tr><th>Id</th><th>startDateReservation</th><th>devolutionDateReservation</th><th>statusReservation</th><th>PartyroomName</th><th>PartyroomOwner</th><th>PartyroomCapacity</th><th>PartyroomDescription</th><th>CategoryName</th><th>CategoryDescription</th><th>messageMessageText</th><th>ClientName</th><th>ClientEmail</th><th>ClientPassword</th><th>ClientAge</th><th>reservationsScore</th></tr>";
+    myTableM += "<thead><tr><th>Id</th><th>startDateReservation</th><th>devolutionDateReservation</th><th>statusReservation</th><th>PartyroomName</th><th>PartyroomOwner</th><th>PartyroomCapacity</th><th>PartyroomDescription</th><th>CategoryName</th><th>CategoryDescription</th><th>messageMessageText</th><th>ClientName</th><th>ClientEmail</th><th>ClientPassword</th><th>ClientAge</th><th>reservationsScore</th></tr></thead>";
     for(i=0;i<items.length;i++){
         myTableM+="<tr>";
         myTableM+="<td>"+items[i].idReservation+"</td>";
@@ -150,11 +150,11 @@ function pintarRespuestaReservationStatus(items){
 
    //declarar variables js
    let myTableM="<table>";
-   myTableM += "<tr><th>Completed</th><th>Cancelled</th></tr>";
+   myTableM += "<thead><tr><th>Completed</th><th>Cancelled</th></tr></thead>";
    for(i=0;i<items.length;i++){
        myTableM+="<tr>";
        myTableM+="<td>"+items[i].StatusReserva.completed+"</td>";
-       myTableM+="<td>"+items[i].StatusReservas.cancelled+"</td>";                      
+       myTableM+="<td>"+items[i].StatusReserva.cancelled+"</td>";
        myTableM+="<td><button onclick='borrarElementoReservation("+items[i].idReservation+")'>Borrar</button>";
        myTableM+="</tr>";
    }

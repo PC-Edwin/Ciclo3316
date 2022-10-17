@@ -21,7 +21,7 @@ function pintarRespuestaClient(items){
 
     //declarar variables js
     let myTableC="<table>";
-    myTableC += "<tr><th>Id</th><th>Name</th><th>Email</th><th>Age</th></tr>";
+    myTableC += "<thead><tr><th>Id</th><th>Name</th><th>Email</th><th>Age</th><th>         </th></tr></thead>";
     for(i=0;i<items.length;i++){
         myTableC+="<tr>";
         myTableC+="<td>"+items[i].idClient+"</td>";

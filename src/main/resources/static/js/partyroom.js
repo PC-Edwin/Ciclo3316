@@ -20,7 +20,7 @@ function pintarRespuestaPartyroom(items){
 
     //declarar variables js
     let myTable="<table>";
-    myTable += "<tr><th>Id</th><th>Name</th><th>Owner</th><th>Capacity</th><th>Description</th><th>CategoryName</th><th>CategoryDescription</th></tr>";
+    myTable += "<thead><tr><th>Id</th><th>Name</th><th>Owner</th><th>Capacity</th><th>Description</th><th>CategoryName</th><th>CategoryDescription</th></tr></thead>";
     for(i=0;i<items.length;i++){
         myTable+="<tr>";
         myTable+="<td>"+items[i].id+"</td>";
