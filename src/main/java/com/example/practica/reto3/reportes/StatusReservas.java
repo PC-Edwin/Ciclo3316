@@ -9,6 +9,8 @@ public class StatusReservas {
         this.cancelled = cancelled;
     }
 
+    StatusReservas statusreserva;
+
     public int getCompleted() {
         return completed;
     }
