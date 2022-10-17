@@ -1,7 +1,7 @@
 function traerInformacionMessage(){
     $.ajax(
               {
-                url:"http://localhost:8080/api/Message/all",
+                url:"http://150.230.177.169:81/api/Message/all",
                 type:"GET",
                 datatype:"JSON",
                 success:function(respuesta){
@@ -53,7 +53,7 @@ function guardarInformacionMessage(){
     $.ajax (
         {
 
-            url          : 'http://localhost:8080/api/Message/save',
+            url          : 'http://150.230.177.169:81/api/Message/save',
             type         : 'POST',
             data         :  dataToSendM,
             datatype     :  "JSON",
@@ -78,7 +78,7 @@ function editarInformacionMessage(){
     $.ajax (
                 {
 
-                    url          : 'http://localhost:8080/api/Message/update',
+                    url          : 'http://150.230.177.169:81/api/Message/update',
                     type         : 'PUT',
                     data         :  dataToSendM,
                     datatype     :  "JSON",
@@ -105,7 +105,7 @@ function borrarElementoMessage(idElemento){
     $.ajax (
         {
 
-            url          : 'http://localhost:8080/api/Message/' + idElemento,
+            url          : 'http://150.230.177.169:81/api/Message/' + idElemento,
             type         : 'DELETE',
             data         :  dataToSendM,
             contentType  : 'application/json',

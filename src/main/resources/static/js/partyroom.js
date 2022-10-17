@@ -1,7 +1,7 @@
 function traerInformacionPartyroom(){
     $.ajax(
               {
-                url:"http://localhost:8080/api/Partyroom/all",
+                url:"http://150.230.177.169:81/api/Partyroom/all",
                 type:"GET",
                 datatype:"JSON",
                 success:function(respuesta){
@@ -47,7 +47,7 @@ function guardarInformacionPartyroom(){
     $.ajax (
         {
 
-            url          : 'http://localhost:8080/api/Partyroom/save',
+            url          : 'http://150.230.177.169:81/api/Partyroom/save',
             type         : 'POST',
             data         :  dataToSend,
             datatype     :  "JSON",
@@ -73,7 +73,7 @@ function editarInformacionPartyroom() {
     $.ajax (
                 {
 
-                    url          : 'http://localhost:8080/api/Partyroom/update',
+                    url          : 'http://150.230.177.169:81/api/Partyroom/update',
                     type         : 'PUT',
                     data         :  dataToSend,
                     datatype     :  "JSON",
@@ -100,7 +100,7 @@ function borrarElementoPartyroom(idElemento){
     $.ajax (
         {
 
-            url          : 'http://localhost:8080/api/Partyroom/' + idElemento,
+            url          : 'http://150.230.177.169:81/api/Partyroom/' + idElemento,
             type         : 'DELETE',
             data         :  dataToSend,
             contentType  : 'application/json',

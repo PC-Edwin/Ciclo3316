@@ -1,7 +1,7 @@
 function traerInformacionReservation(){
     $.ajax(
               {
-                url:"http://localhost:8080/api/Reservation/all",
+                url:"http://150.230.177.169:81/api/Reservation/all",
                 type:"GET",
                 datatype:"JSON",
                 success:function(respuesta){
@@ -57,7 +57,7 @@ function guardarInformacionReservation(){
     $.ajax (
         {
 
-            url          : 'http://localhost:8080/api/Reservation/save',
+            url          : 'http://150.230.177.169:81/api/Reservation/save',
             type         : 'POST',
             data         :  dataToSendM,
             datatype     :  "JSON",
@@ -82,7 +82,7 @@ function editarInformacionReservation(){
     $.ajax (
                 {
 
-                    url          : 'http://localhost:8080/api/Reservation/update',
+                    url          : 'http://150.230.177.169:81/api/Reservation/update',
                     type         : 'PUT',
                     data         :  dataToSend,
                     datatype     :  "JSON",
@@ -109,7 +109,7 @@ function borrarElementoReservation(idElemento){
     $.ajax (
         {
 
-            url          : 'http://localhost:8080/api/Reservation/' + idElemento,
+            url          : 'http://150.230.177.169:81/api/Reservation/' + idElemento,
             type         : 'DELETE',
             data         :  dataToSend,
             contentType  : 'application/json',
@@ -131,7 +131,7 @@ function borrarElementoReservation(idElemento){
 function consultarTopClientes() {
     $.ajax(
         {
-        url:'http://localhost:8080/api/Reservation/report-status',
+        url:'http://150.230.177.169:81/api/Reservation/report-status',
         type:"GET",
         datatype:"JSON",
         success:function(respuesta){
@@ -153,8 +153,8 @@ function pintarRespuestaReservationStatus(items){
    myTableM += "<tr><th>Completed</th><th>Cancelled</th></tr>";
    for(i=0;i<items.length;i++){
        myTableM+="<tr>";
-       myTableM+="<td>"+items[i].statusreserva.getCompleted()+"</td>";
-       myTableM+="<td>"+items[i].statusreserva.getCancelled()+"</td>";                      
+       myTableM+="<td>"+items[i].StatusReserva.completed+"</td>";
+       myTableM+="<td>"+items[i].StatusReservas.cancelled+"</td>";                      
        myTableM+="<td><button onclick='borrarElementoReservation("+items[i].idReservation+")'>Borrar</button>";
        myTableM+="</tr>";
    }

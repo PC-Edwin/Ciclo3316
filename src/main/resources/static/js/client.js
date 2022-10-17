@@ -1,7 +1,7 @@
 function traerInformacionClient(){
     $.ajax(
               {
-                url:"http://localhost:8080/api/Client/all",
+                url:"http://150.230.177.169:81/api/Client/all",
                 type:"GET",
                 datatype:"JSON",
                 success:function(respuesta){
@@ -45,7 +45,7 @@ function guardarInformacionClient(){
     $.ajax (
         {
 
-            url          : 'http://localhost:8080/api/Client/save',
+            url          : 'http://150.230.177.169:81/api/Client/save',
             type         : 'POST',
             data         :  dataToSendC,
             datatype     :  "JSON",
@@ -71,7 +71,7 @@ function editarInformacionClient(){
     $.ajax (
                 {
 
-                    url          : 'http://localhost:8080/api/Client/update',
+                    url          : 'http://150.230.177.169:81/api/Client/update',
                     type         : 'PUT',
                     data         :  dataToSend,
                     datatype     :  "JSON",
@@ -98,7 +98,7 @@ function borrarElementoClient(idElemento){
     $.ajax (
         {
 
-            url          : 'http://localhost:8080/api/Client/' + idElemento,
+            url          : 'http://150.230.177.169:81/api/Client/' + idElemento,
             type         : 'DELETE',
             data         :  dataToSend,
             contentType  : 'application/json',
