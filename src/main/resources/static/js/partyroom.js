@@ -73,7 +73,7 @@ function editarInformacionPartyroom() {
     $.ajax (
                 {
 
-                    url          : 'http://150.230.177.169:81/api/Partyroom/update',
+                    url          : 'hhttp://150.230.177.169:81/api/Partyroom/update',
                     type         : 'PUT',
                     data         :  dataToSend,
                     datatype     :  "JSON",
